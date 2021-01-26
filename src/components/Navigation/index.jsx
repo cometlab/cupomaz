@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 
-export default props => {
+const Navigation = () => {
     return (
         <Container>
             <Link href='/'>
@@ -24,3 +24,5 @@ export default props => {
         </Container>
     )
 }
+
+export default Navigation

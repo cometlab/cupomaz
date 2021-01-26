@@ -2,7 +2,7 @@ import { Container, Stores } from './styled'
 import Link from 'next/link'
 import Image from 'next/image'
 
-export default props => {
+const TopStores = () => {
   return (
     <Container>
       <header>
@@ -48,3 +48,5 @@ export default props => {
     </Container >
   )
 }
+
+export default TopStores

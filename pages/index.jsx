@@ -1,6 +1,8 @@
 import Navigation from '../src/components/Navigation'
 import TopStores from '../src/components/TopStores'
+import Coupons from '../src/components/Coupons'
 import styled from 'styled-components'
+
 
 
 const Container = styled.div`
@@ -14,6 +16,7 @@ export default function Home() {
     <Container>
       <Navigation />
       <TopStores />
+      <Coupons />
     </Container>
   )
 }
