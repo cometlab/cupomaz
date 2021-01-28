@@ -1,10 +1,9 @@
-import { createGlobalStyle, ThemeProvider } from 'styled-components'
+import React from 'react';
+import { createGlobalStyle, ThemeProvider } from 'styled-components';
+// eslint-disable-next-line import/no-unresolved
+import Head from 'next/head';
 
 const GlobalStyle = createGlobalStyle`
-  /* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -19,57 +18,61 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-	display: block;
+display: block;
 }
 body {
-	line-height: 1;
-  font-family: 'Roboto', sans-serif;
+line-height: 1;
+font-family: 'Roboto', sans-serif;
 }
 ol, ul {
-	list-style: none;
+list-style: none;
 }
 blockquote, q {
-	quotes: none;
+quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+content: '';
+content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+border-collapse: collapse;
+border-spacing: 0;
 }
 
-:root {
-  
-}
-
-`
+`;
 
 const theme = {
   colors: {
     primary: '#0070f3',
   },
-}
+};
 
+// eslint-disable-next-line react/prop-types
 export default function App({ Component, pageProps }) {
   return (
     <>
+      <Head>
+        <title>
+          CupomAZ - Encontre as melhores Promoções,
+          Cupons de Desconto e Ofertas. De A a Z
+        </title>
+      </Head>
       <GlobalStyle />
       <ThemeProvider theme={theme}>
+        {/* eslint-disable-next-line react/jsx-props-no-spreading */}
         <Component {...pageProps} />
       </ThemeProvider>
     </>
-  )
+  );
 }

@@ -1,6 +1,5 @@
 import { Container, Coupon } from './styled'
 import CouponList from '../CouponList'
-import Image from 'next/image'
 
 const Coupons = () => {
     return (

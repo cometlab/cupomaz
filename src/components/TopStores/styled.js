@@ -1,5 +1,6 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
+// eslint-disable-next-line import/prefer-default-export
 export const Container = styled.section`
     padding: 3% 2rem;
 
@@ -25,5 +26,3 @@ export const Container = styled.section`
         padding: 8px;
     }
 `;
-
-
