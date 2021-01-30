@@ -2,13 +2,14 @@ import styled from 'styled-components';
 
 // eslint-disable-next-line import/prefer-default-export
 export const Container = styled.div`
-    padding: 0 2rem;
+    width: 1200px;
     height: 60px;
 
     margin: 16px auto;
 
     display: grid;
-    grid-template-columns: 120px 2fr 2fr;
+    /* grid-template-columns: 120px 2fr 2fr; */
+    grid-template-columns: 120px 2fr;
     align-items: center;
 
     form {
