@@ -18,7 +18,7 @@ const Navigation = () => {
                 <button type="submit">Buscar</button>
             </form> */}
             <nav>
-                <Link href='/categorias'><a>Categorias</a></Link>
+                <Link href='/cupons-de-desconto'><a>Cupons de Desconto</a></Link>
                 <Link href='/lojas'><a>Lojas</a></Link>
             </nav>
         </Container>
