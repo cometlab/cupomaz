@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
-import Navigation from '../src/components/Navigation'
-import { Container } from '../src/Views/Home/styled'
+import React from 'react'
+import Navigation from '../../components/Navigation'
+import { Container } from './styled'
 import { useRouter } from 'next/router'
 
 function Home(props) {
@@ -21,10 +21,8 @@ function Home(props) {
             <Container.SingleCoupon key={coupon.id}>
                 <img src={coupon.store.image} alt={coupon.store.name} />
                 <header>{coupon.description}...</header>
-                <button onClick={(e) => {
-                    e.preventDefault
-                    window.open(`/?c=${coupon.id}`)
-                    router.push(coupon.link)
+                <button onClick={() => {
+                    router.push(`/cupom?${coupon.id}`);
                 }}>
                     {coupon.code}
                     <span>Usar Cupom</span>
@@ -32,7 +30,6 @@ function Home(props) {
             </Container.SingleCoupon>
         )
     })
-
 
     return (
         <Container>
@@ -48,13 +45,13 @@ function Home(props) {
                 <Container.CouponList>
                     {couponList}
                 </Container.CouponList>
-
             </Container.Content>
         </Container>
     )
 }
 
 export default Home
+
 
 export async function getStaticProps() {
     const couponRes = await fetch('http://api.lomadee.com/v2/1611855841303b30b6c5f/coupon/_all?sourceId=36379559')
